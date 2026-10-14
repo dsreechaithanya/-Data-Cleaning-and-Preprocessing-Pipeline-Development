@@ -1,0 +1,63 @@
+{
+  "run_timestamp_utc": "2026-10-14T13:05:25.252722+00:00",
+  "input_rows": 10,
+  "exact_duplicates_removed": 1,
+  "quarantined_rows": 1,
+  "cleaned_rows": 8,
+  "row_reconciliation_passed": true,
+  "issue_counts": {
+    "exact_duplicate_removed": 1,
+    "ingredients_missing": 1,
+    "missing_product_name": 1,
+    "price_negative": 1,
+    "rating_missing": 1,
+    "rating_out_of_range": 1
+  },
+  "category_counts_after_cleaning": {
+    "body lotion": 1,
+    "cleanser": 1,
+    "face oil": 1,
+    "moisturizer": 2,
+    "serum": 2,
+    "sun care": 1
+  },
+  "field_missing_counts_after_cleaning": {
+    "source_record_id": 0,
+    "product_name": 0,
+    "category": 0,
+    "ingredients_text": 1,
+    "size": 0,
+    "price": 0,
+    "rating": 1,
+    "review_count": 0
+  },
+  "field_missing_rates_after_cleaning": {
+    "source_record_id": 0.0,
+    "product_name": 0.0,
+    "category": 0.0,
+    "ingredients_text": 0.125,
+    "size": 0.0,
+    "price": 0.0,
+    "rating": 0.125,
+    "review_count": 0.0
+  },
+  "missing_ingredient_rate": 0.125,
+  "rating_missing_or_invalid_rate": 0.25,
+  "assumptions": [
+    "Rating validation assumes the source scale is 1 through 5.",
+    "Review-count commas are thousands separators.",
+    "Size conversion is not performed between mass and volume.",
+    "Unmapped category labels are retained after whitespace/case normalization.",
+    "Prices without a currency marker retain an empty currency field.",
+    "Synthetic demonstration records are invented, not real observations."
+  ],
+  "source": "built-in synthetic demonstration",
+  "input_sha256": "c387f488605185e27dfbf9f6420a0516175fb779ce327186a92e3cf83ba194aa",
+  "python_version": "3.13.15",
+  "pipeline_version": "1.1.0",
+  "output_sha256s": {
+    "cleaned_products.csv": "e793c2da144a3a6cf8befa94bdc586a39c78c1644549ed4c9fedf98d5b0bc123",
+    "quarantined_rows.csv": "a8cedab0b6dac6ff8ef77a4a86992db2d9e84b3aa1000e0eed737c1aa93fc8fc",
+    "removed_duplicates.csv": "bf990eec6b8ed46becf7f3b22c9d7005896267cdf886a4f3e4f8c5007c670984"
+  }
+}
